@@ -6,7 +6,7 @@ const NavBar = () => {
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid text-center">
-            <a><img src="https://www.adata.com/_nuxt/img/xpg_logo.e87e200.png" alt="logo" width="300" height="100"></img></a>
+            <a href=''><img src="https://i.pinimg.com/736x/8d/73/5f/8d735f842b2e4f7182e14fa553c40ee1.jpg" alt="logo" width="120" height="100"></img></a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -26,16 +26,15 @@ const NavBar = () => {
                     </ul>
                   </li>
                 </ul>
-                <CartWidget  />
-                <form class="d-flex">
+                <form class="d-flex m-2">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                   <button class="btn btn-outline-success" type="submit">Buscador</button>
                 </form>
+                <CartWidget /> 
               </div>
           </div>
       </nav>
       </div>
     )
-    //<img src="https://www.adata.com/_nuxt/img/xpg_logo.e87e200.png" alt="logo" width="300" height="100"></img>
 }
 export default NavBar
