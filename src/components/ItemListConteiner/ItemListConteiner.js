@@ -1,7 +1,22 @@
+import { useState, useEffect } from "react"
+import { getGames } from "../../asyncmonck";
+import ItemList from "./itemList";
+
 const ItemListConteiner = (props) => {
-    console.log(props.greeting)
+    const [products, setProducts] = useState ([]);
+
+    useEffect (() => {
+        getGames().then (prods => {
+            setProducts(prods);
+
+        })
+    },[])
     return (
-        <h1 class="text-center fw-bold">{props.greeting}</h1>
+        <div class="conteiner-fluid m-5 text-center ">
+            <h1 class="text-center fw-bold">{props.greeting}</h1>
+            <ItemList products={products}/>
+            
+        </div>
     )
 }
 
