@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner'
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemCount from './components/ItemCount/counter';
 
 function App() {
 
@@ -16,7 +16,6 @@ function App() {
         <NavBar />
       </header>
     <ItemListConteiner greeting={'Bienvenidos'}/>
-    < ItemCount initial={1} stock={9} onAdd={handleOnAdd}></ItemCount>
     </div>
   );
 }

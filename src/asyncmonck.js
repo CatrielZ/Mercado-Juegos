@@ -34,5 +34,14 @@ export const getGames = () => {
     })
 }
 
+export const getProductsById = (id) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(games.find(prod => prod.id === id))
+        }, 500)
+    })
+}
 
 export default games;
+
+
