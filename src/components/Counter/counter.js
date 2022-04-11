@@ -23,9 +23,9 @@ const Counter = () => {
 
     return(  
         <div className="BotonesHorizontal">
-            <button onClick={decrement} className="BotonesGrandes">-</button>
+            <button onClick={decrement} className="BotonesGrandes fw-bold">-</button>
             <p className="mx-2">{count}</p>
-            <button onClick={increment} className="BotonesGrandes">+</button>
+            <button onClick={increment} className="BotonesGrandes fw-bold">+</button>
         </div>
     )
 }
