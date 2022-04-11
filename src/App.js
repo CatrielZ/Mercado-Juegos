@@ -23,15 +23,16 @@ const App = () => {
         <BrowserRouter>
         <NavBar />
         <div className='row'>
-        <div className='col-2'>
+        <div className='col-2 m-1 '>
           <h3 className='text-center fw-bold'>Categorias</h3>
-          <ul>
-            <li className='nav-item'>
-              { categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`} className='nav-link active'>{cat.description}</Link>)}
+          <ul className='text-center list-group'>
+            <li className='list-group-item'><Link to='/list'  aria-current='page'>Todos</Link></li>
+            <li>
+              { categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`} className='list-group-item'>{cat.description}</Link>)}
             </li>
           </ul>
         </div>
-        <div className="container col-10">
+        <div className="container col-9">
         <Routes>
           <Route path='/list' element={<ItemListContainer />} />
           <Route path='/' element={<ItemListContainer />} />
