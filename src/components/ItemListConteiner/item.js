@@ -1,12 +1,20 @@
 const Item = ({name, img}) => {
     return(
-        <section>
+      /*  <section class="m-5">
             <picture>
-                <img src={img} alt= {name} />
+                <img src={img} alt= {name} class="card-img-top"/>
             </picture>
-            <p>{name}</p>
+            <p class="fw-bold">{name}</p>
             <button>Ver detalle</button>
-        </section>
+        </section>*/
+        <div class="card" >
+            <img src={img} alt= {name} class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{name}</h5>
+          <a href="#" class="btn btn-primary">Ver detalle</a>
+        </div>
+        
+      </div>
     )
 }
 export default Item;

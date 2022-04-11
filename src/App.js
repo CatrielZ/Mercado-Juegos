@@ -16,7 +16,7 @@ function App() {
         <NavBar />
       </header>
     <ItemListConteiner greeting={'Bienvenidos'}/>
-    < ItemCount initial={1} stock={9} onAdd={handleOnAdd}></ItemCount> 
+    < ItemCount initial={1} stock={9} onAdd={handleOnAdd}></ItemCount>
     </div>
   );
 }
