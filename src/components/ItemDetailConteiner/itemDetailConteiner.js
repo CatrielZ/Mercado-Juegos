@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState()
+    const [games, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
     const { productId} = useParams()
@@ -26,12 +26,12 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     return (
-        <div className="IitemDetailContainer" >
+        <div className="itemDetailContainer" >
             {
                 loading ?
                     <h1>Cargando detalle...</h1> :
-                product ?
-                    <ItemDetail {...product} /> :
+                games ?
+                    <ItemDetail {...games} /> :
                     <h1>El producto no existe</h1>
             }
             

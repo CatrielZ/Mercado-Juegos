@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner'
-import ItemCount from './components/ItemCount/counter';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailConteiner/itemDetailConteiner';
 
 function App() {
 
@@ -12,11 +12,18 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+        <BrowserRouter>
         <NavBar />
-      </header>
-    <ItemListConteiner greeting={'Bienvenidos'}/>
-    </div>
+        <div className="container row">
+        <Routes>
+          <Route path='/list' element={<ItemListConteiner />} />
+          <Route path='/' element={<ItemListConteiner />} />
+          <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+          <Route path='*' element={<h1>Error 404</h1>} />
+        </Routes>
+        </div>
+        </BrowserRouter>
+      </div>
   );
 }
 

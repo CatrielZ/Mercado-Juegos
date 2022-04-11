@@ -1,14 +1,18 @@
+import { Link } from "react-router-dom";
 
 const Item = ({name, img, id}) => {
     return (
-        <div className="col">
+        
+        <div className="col-3  m-1 ">
         <div className="card">
             <img src={img} className="card-img-top" alt={name} />
             <div className="card-body">
             <h5 className="card-title">{name}</h5>
+            <Link to={`/detail/${id}`} className="btn btn-dark">Ver detalle</Link>
             </div>
         </div>
         </div>
+        
     )
 }
 
