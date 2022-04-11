@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import { getProductsById } from '../../asyncmonck';
 import ItemDetail from '../ItemDetail/itemDetail';
-import {useParams} from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
-    const [games, setProduct] = useState()
+    const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
     const { productId} = useParams()
@@ -26,12 +25,12 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     return (
-        <div className="itemDetailContainer" >
+        <div className="IitemDetailContainer" >
             {
                 loading ?
                     <h1>Cargando detalle...</h1> :
-                games ?
-                    <ItemDetail {...games} /> :
+                product ?
+                    <ItemDetail {...product} /> :
                     <h1>El producto no existe</h1>
             }
             

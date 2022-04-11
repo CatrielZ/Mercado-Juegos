@@ -1,0 +1,10 @@
+.BotonesHorizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.BotonesGrandes{
+    width: 50px;
+    height: 30px;
+    background-color: #D67E0E;
+}

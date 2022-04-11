@@ -1,29 +1,49 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar'
-import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner'
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListConteiner/ItemListConteiner';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailConteiner/itemDetailConteiner';
+import { getCategories } from './asyncmonck';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-function App() {
 
-  const  handleOnAdd = (quantify) =>{
-    console.log(`se agrego ${quantify} a nuestro carrito`);
-  }
+const App = () => {
+  const [categories, setCategories] = useState([])
+
+    useEffect(() =>{
+        getCategories().then(categories =>{
+            setCategories(categories)
+        })
+    }, [])
 
   return (
-    <div className="App">
+    <>
+      <div className="App">
         <BrowserRouter>
         <NavBar />
-        <div className="container row">
+        <div className='row'>
+        <div className='col-2'>
+          <h3 className='text-center fw-bold'>Categorias</h3>
+          <ul>
+            <li className='nav-item'>
+              { categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`} className='nav-link active'>{cat.description}</Link>)}
+            </li>
+          </ul>
+        </div>
+        <div className="container col-10">
         <Routes>
-          <Route path='/list' element={<ItemListConteiner />} />
-          <Route path='/' element={<ItemListConteiner />} />
+          <Route path='/list' element={<ItemListContainer />} />
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/detail/:productId' element={<ItemDetailContainer />} />
           <Route path='*' element={<h1>Error 404</h1>} />
         </Routes>
         </div>
+        </div>
         </BrowserRouter>
       </div>
+    </>
   );
 }
 

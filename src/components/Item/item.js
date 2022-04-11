@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import './Item.css'
 
 const Item = ({name, img, id}) => {
     return (
-        
-        <div className="col-3  m-1 ">
+        <div className="col">
         <div className="card">
             <img src={img} className="card-img-top" alt={name} />
             <div className="card-body">
@@ -12,8 +12,7 @@ const Item = ({name, img, id}) => {
             </div>
         </div>
         </div>
-        
     )
 }
 
-export default Item;
+export default Item
