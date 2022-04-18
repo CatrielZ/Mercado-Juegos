@@ -1,11 +1,8 @@
 import { useState } from "react"
 import './Counter.css';
-const Counter = () => {
+const Counter = ({initial, stock, onAdd}) => {
     
-    const initial = 1
-    const stock = 50
-    
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
     
 
     const decrement = () => {
@@ -22,10 +19,18 @@ const Counter = () => {
     
 
     return(  
-        <div className="BotonesHorizontal">
-            <button onClick={decrement} className="BotonesGrandes fw-bold">-</button>
-            <p className="mx-2">{count}</p>
-            <button onClick={increment} className="BotonesGrandes fw-bold">+</button>
+        <div className="BotonesHorizontal row">
+            
+            <button onClick={decrement} className="BotonesGrandes fw-bold col-3">-</button>
+            <p className="mx-2 col-3">{count}</p>
+            <button onClick={increment} className="BotonesGrandes fw-bold col-3">+</button>
+            <button type="button" class="btn btn-outline-info col-12">({stock} disponible)</button>
+           
+            <div className="col-12 text-center m-5">
+            
+            <button   type ="button" className="btn btn-dark " onClick={() => onAdd(count)}>Agregar al carrito</button>
+            </div>
+            
         </div>
     )
 }

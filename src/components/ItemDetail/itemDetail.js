@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom"
 import Counter from "../Counter/counter"
 import './itemDetail.css'
+import { useState } from "react"
 
-const ItemDetail = ({id, name, img, category, description, price}) => {
+const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+    const [quantity, setQuantity]= useState(0)
+    
+    const handleOnAdd = (count) => {
+        console.log('agregar al carrito')
+        setQuantity(count)
+    }
     return (
         <div className="row text-center justify-content-evenly">
             <div className="col-6">
@@ -17,8 +24,8 @@ const ItemDetail = ({id, name, img, category, description, price}) => {
                             
 
                             <p className="card-text fw-bold precioSize">${price}</p>
-                            <Counter />
-                            <Link to='#' className="btn btn-dark m-5">Agregar al carrito</Link>
+                            {quantity > 0 ? <Link to='/cart' className="btn btn-dark m-5">Comprar</Link> : <Counter initial={1} stock={stock} onAdd={handleOnAdd}/>}
+                            
                         </div>
                     </div>
         
