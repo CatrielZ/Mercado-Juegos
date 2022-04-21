@@ -2,8 +2,12 @@ import { Link } from "react-router-dom"
 import './Item.css'
 
 const Item = ({name, img, id}) => {
+
+    const handleClick = (e) => {
+        e.stopPropagation()
+    }
     return (
-        <div className="col text-center">
+        <div className="col text-center" onClick={handleClick}>
         <div className="card">
             <img src={img} className="card-img-top" alt={name} />
             <div className="card-body">

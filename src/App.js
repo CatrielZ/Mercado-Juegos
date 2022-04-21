@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailConteiner/itemDetailCont
 import { getCategories } from './asyncmonck';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { CartContextProvider } from './context/cartContext';
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
 
   return (
     <>
-      <div className="App">
+      <CartContextProvider>
         <BrowserRouter>
         <NavBar />
         <div className='row'>
@@ -43,7 +44,7 @@ const App = () => {
         </div>
         </div>
         </BrowserRouter>
-      </div>
+        </CartContextProvider>
     </>
   );
 }

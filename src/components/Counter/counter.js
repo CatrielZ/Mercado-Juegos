@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './Counter.css';
+
 const Counter = ({initial, stock, onAdd}) => {
     
     const [count, setCount] = useState(initial)

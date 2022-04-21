@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom"
+import CartContext from "../../context/cartContext"
+import { useContext } from "react"
 
 const CartWidget = () => {
+
+    const {getQuantity} = useContext (CartContext)
+    
     return (
-        <div>
+        <>
             <a><img src="https://cdn-icons-png.flaticon.com/512/116/116356.png" height="23" width="24"></img></a>
-            <span  class="badge bg-primary">0</span>
-        </div>
+            <div  class="badge bg-primary">{getQuantity()}</div>
+        </>
         )
 }
 
