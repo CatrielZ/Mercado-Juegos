@@ -17,7 +17,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
             id, name, price
         }
 
-        addItem({...productObj,quantity:count})
+        addItem({...productObj,quantify:count})
     }
     return (
         <div className="row text-center justify-content-evenly">
