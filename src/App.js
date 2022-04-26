@@ -7,6 +7,7 @@ import { getCategories } from './asyncmonck';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { CartContextProvider } from './context/cartContext';
+import Cart from './components/Cart/Cart';
 
 
 const App = () => {
@@ -39,7 +40,7 @@ const App = () => {
           <Route path='/' element={<ItemListContainer />} />
           <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/detail/:productId' element={<ItemDetailContainer />} />
-          <Route path='*' element={<h1>Error 404</h1>} />
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
         </div>
         </div>
