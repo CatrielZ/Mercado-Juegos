@@ -20,7 +20,7 @@ const Cart =() =>{
         <>
             <div>
                 {cart.map(prod => <ItemCart key={prod.id}{...prod}/>)}
-                <p>Total: {totalCost()}</p>
+                <p>Total:{totalCost()}</p>
                 <button onClick={() => clearCart()}>Vaciar</button>
                 <button onClick={() => finishBuy()}>Finalizar</button>
             </div>

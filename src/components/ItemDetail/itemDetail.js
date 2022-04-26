@@ -31,9 +31,9 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                         <h1 className="card-title mb-5">{name}</h1> 
                         <div className="card-body my-5"> 
                             
-
-                            <p className="card-text fw-bold precioSize">${price}</p>
-                            {isInCart(id) ? <Link to='/cart' className="btn btn-dark m-5">Comprar</Link> : <Counter initial={1} stock={stock} onAdd={handleOnAdd}/>}
+                            <p>Se agrego al Carrito</p>
+                            <p className="card-text fw-bold precioSize"></p>
+                            {isInCart(id) ? <Link to='/cart' className="btn btn-dark m-5">Carrito</Link> : <Counter initial={1} stock={stock} onAdd={handleOnAdd}/>}
                             
                         </div>
                     </div>
