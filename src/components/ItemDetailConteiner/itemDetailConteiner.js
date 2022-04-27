@@ -1,23 +1,30 @@
 import { useState, useEffect } from 'react';
-import { getProductsById } from '../../asyncmonck';
+//import { getProductsById } from '../../asyncmonck';
 import ItemDetail from '../ItemDetail/itemDetail';
 import { useParams } from 'react-router-dom';
 import CartContext from '../../context/cartContext';
+import { firestoreDb } from '../../service/firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = ({setCart, cart}) => {
     const [product, setProduct] = useState()
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
     const { productId} = useParams()
 
     useEffect(() => {
-        getProductsById(productId).then(item => {
+        /*getProductsById(productId).then(item => {
             setProduct(item)
         }).catch(err => {
             console.log(err)
         }).finally(() => {
             setLoading(false)
+        })*/
+        getDoc(doc(firestoreDb, 'products', productId)).then(response => {
+            console.log(response);
+            const product ={id: response.id, ...response.data()}
+            setProduct(product)
         })
 
         return (() => {

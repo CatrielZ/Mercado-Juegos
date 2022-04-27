@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import CartContext from "../../context/cartContext";
-import Item from "../Item/item";
 
 
 
