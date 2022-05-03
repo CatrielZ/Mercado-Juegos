@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { CartContextProvider } from './context/cartContext';
 import Cart from './components/Cart/Cart';
+import Form from './components/Forms/Form';
 
 
 const App = () => {
@@ -37,10 +38,12 @@ const App = () => {
         <div className="container col-9">
         <Routes>
           <Route path='/list' element={<ItemListContainer />} />
-          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+          <Route path='/form' element= {<Form/>}/>
           <Route path='/cart' element={<Cart/>} />
+          
         </Routes>
         </div>
         </div>

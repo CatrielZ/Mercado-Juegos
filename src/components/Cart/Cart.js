@@ -2,7 +2,8 @@ import ItemCart from "../ItemCart/ItemCart"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import CartContext from "../../context/cartContext"
-
+import { firestoreDb } from "../../service/firebase"
+import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from "firebase/firestore"
 
 const Cart =() =>{
     const { cart, totalCost, clearCart, finishBuy} = useContext(CartContext)
@@ -18,11 +19,11 @@ const Cart =() =>{
 
     return (
         <>
-            <div>
+            <div className="text-center">
                 {cart.map(prod => <ItemCart key={prod.id}{...prod}/>)}
-                <p>Total:{totalCost()}</p>
-                <button onClick={() => clearCart()}>Vaciar</button>
-                <button onClick={() => finishBuy()}>Finalizar</button>
+                <p className="fw-bold">Total:{totalCost()}</p>
+                <button className="btn btn-primary m-5" onClick={() => clearCart()}>Vaciar</button>
+                <Link className="btn btn-success m-5" to={'/form'}>Realizar Compra</Link>
             </div>
         
         </>
