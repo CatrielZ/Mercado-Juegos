@@ -14,21 +14,21 @@ const NavBar = () => {
     }, [])
 
     return(
-    <nav className='navbar navbar-expand-lg navbar-light bg-light pb-0 pt-0'>
-        <div className='container-fluid justify-content-center'>
-            <img src="https://i.pinimg.com/736x/8d/73/5f/8d735f842b2e4f7182e14fa553c40ee1.jpg" alt='' width='150' height='130' className='me-5'/>
+    <nav className='navbar navbar-expand-lg  pb-0 pt-0 fw-bold NavBarColor NavBar'>
+        <div className='container-fluid justify-content-center text-center'>
+            <img src="https://img.freepik.com/vector-gratis/logo-sala-juegos_191108-86.jpg" alt='' width='150' height='130' className='me-5 LogoNavBar'/>
             <div className='collapse navbar-collapse justify-content-center mb-0 mt-0' id='navbarSupportedContent'>
                 <ul className='navbar-nav me-5 mb-2 mb-lg-0'>
                     <li className='nav-item'>
-                         <Link to='/list' className='nav-link active' aria-current='page' >Inicio</Link>
+                         <Link to='/list' className='nav-link active colorText' aria-current='page' >Inicio</Link>
                          </li>
                     <li className='nav-item dropdown'>
-                        <Link  to ='/' className='nav-link dropdown-toggle'  id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                        <Link  to ='/' className='nav-link dropdown-toggle colorText'  id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                             Genero
                         </Link>
-                <ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
+                <ul className='dropdown-menu NavBarColor' aria-labelledby='navbarDropdown'>
                     <li className='nav-item'>
-                        { categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`} className='nav-link active'>{cat.description}</Link>)}
+                        { categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`} className='nav-link active colorText'>{cat.description}</Link>)}
                     </li>
                 </ul>
                     </li>
