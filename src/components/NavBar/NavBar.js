@@ -2,11 +2,12 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getCategories } from '../../asyncmonck'
+import { getCategories, getProducts } from '../../asyncmonck'
+import Buscador from './Buscador'
 
 const NavBar = () => {
     const [categories, setCategories] = useState([])
-
+   
     useEffect(() =>{
         getCategories().then(categories =>{
             setCategories(categories)
@@ -34,10 +35,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 
-            <form className='d-flex'>
-                <input className='form-control me-2' type='search' placeholder='Buscar' aria-label='Search'/>
-                <button className='btn btn-outline-dark' type='submit'>Buscar</button>
-            </form>
+                <Buscador />
             <div className='m-5'>
             <CartWidget />
             </div>

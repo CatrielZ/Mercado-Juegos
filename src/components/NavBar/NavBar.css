@@ -11,6 +11,15 @@ background: linear-gradient(to bottom,  rgb(239,0,11) 0%,rgb(234,58,79) 12%,rgb(
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef000b', endColorstr='#817adb',GradientType=0 ); /* IE6-9 */
 
 }
+.categoriasColor {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,2989d8+11,2f2cea+22,912cea+40,c22ce8+58,c860e5+76,e560c2+86,e5606f+94,f40010+100 */
+background: rgb(125,185,232); /* Old browsers */
+background: -moz-linear-gradient(top,  rgb(125,185,232) 0%, rgb(41,137,216) 11%, rgb(47,44,234) 22%, rgb(145,44,234) 40%, rgb(194,44,232) 58%, rgb(200,96,229) 76%, rgb(229,96,194) 86%, rgb(229,96,111) 94%, rgb(244,0,16) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgb(125,185,232) 0%,rgb(41,137,216) 11%,rgb(47,44,234) 22%,rgb(145,44,234) 40%,rgb(194,44,232) 58%,rgb(200,96,229) 76%,rgb(229,96,194) 86%,rgb(229,96,111) 94%,rgb(244,0,16) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgb(125,185,232) 0%,rgb(41,137,216) 11%,rgb(47,44,234) 22%,rgb(145,44,234) 40%,rgb(194,44,232) 58%,rgb(200,96,229) 76%,rgb(229,96,194) 86%,rgb(229,96,111) 94%,rgb(244,0,16) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#f40010',GradientType=0 ); /* IE6-9 */
+
+}
 .LogoNavBar{
     border-radius: 50%;
 }
