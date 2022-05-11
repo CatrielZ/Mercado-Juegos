@@ -2,17 +2,24 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getCategories, getProducts } from '../../asyncmonck'
 import Buscador from './Buscador'
+import { firestoreDb } from '../../service/firebase'
+import { collection, getDocs, where } from 'firebase/firestore'
+import { getCategories, getProducts } from '../../asyncmonck'
 
 const NavBar = () => {
     const [categories, setCategories] = useState([])
    
-    useEffect(() =>{
+
+     useEffect(() =>{
         getCategories().then(categories =>{
             setCategories(categories)
         })
     }, [])
+
+  
+
+
 
     return(
     <nav className='navbar navbar-expand-lg  pb-0 pt-0 fw-bold NavBarColor NavBar'>
@@ -33,9 +40,9 @@ const NavBar = () => {
                     </li>
                 </ul>
                     </li>
-                </ul>
+              </ul>
                 
-                <Buscador />
+               {/* <Buscador /> */}
             <div className='m-5'>
             <CartWidget />
             </div>

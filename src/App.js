@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListConteiner/ItemListConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailConteiner/itemDetailConteiner';
-import { getCategories } from './asyncmonck';
+
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { CartContextProvider } from './context/cartContext';
