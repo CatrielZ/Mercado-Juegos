@@ -87,22 +87,36 @@ const Form = () => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h1 className='Title'>Tus datos</h1>
-            <div className='Form'>
-                <div className='Field'>
-                    <div className='Inputs'>
-                        <label><input placeholder="Nombre y apellido" type='text' onChange={handleChange} name="nombre" value={input.nombre}/></label>
-                        <label><input placeholder="Email" type='text' onChange={handleChange} name="correo" value={input.correo}/></label>
-                        <label><input placeholder="Dirección de envío" type='text' onChange={handleChange} name="direccion" value={input.direccion}/></label>
-                        <label><input placeholder="Teléfono" type="text" onChange={handleChange} name="telefono" value={input.telefono}/></label>
-                    </div>
-                    <div>
-                        <button onClick={() => createOrder()} className="Finish">Finalizar compra</button>
-                    </div>
-                </div>
+      
+        <form className="m-5 colorText">
+            <div class="form-group">
+                <fieldset className="m-1">
+                    <label class="form-label" for="Input">Nombre</label>
+                    <input class="form-control" id="Input" type="text" placeholder="Nombre" disabled=""/>
+
+                
+                    <label class="form-label" for="disabledInput">Apellido</label>
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Apellido" disabled=""/>
+
+                
+                    <label class="form-label" for="disabledInput">Dirección</label>
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Dirección" disabled=""/>
+
+                
+                    <label class="form-label" for="disabledInput">Telefono</label>
+                    <input class="form-control" id="disabledInput" type="number" placeholder="Telefono" disabled=""/>
+                </fieldset>
             </div>
-        </form>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>   
+            </div>
+            <div>
+                        <button onClick={() => createOrder()} className="btn btn-success m-2">Finalizar compra</button>
+                    </div>
+        </form> 
     )
 
     }

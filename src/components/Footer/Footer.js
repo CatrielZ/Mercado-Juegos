@@ -1,8 +1,9 @@
+import './Footer.css'
 
 const Footer = () =>{
     return (
     <footer>    
-        <div class="conteiner m-5 conteinerFooter bg-light ">
+        <div class="conteiner m-5 conteinerFooter bg-light  FooterColor colorTex">
         <div class="row m-3">
             <div class="col-12 col-md-4 ">
                <div class="px-5 my-5">

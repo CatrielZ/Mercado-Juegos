@@ -20,14 +20,14 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
         addItem({...productObj,quantify:count})
     }
     return (
-        <div className="row text-center justify-content-evenly">
+        <div className="row text-center justify-content-evenly bordeImg">
             <div className="col-6">
                 <div className="card-body">
                     
-                    <img src={img} className="card-img-top p-5 img-fluid" alt={name}  />
+                    <img src={img} className="card-img-top p-5 img-fluid " alt={name}  />
                 </div>
             </div>     
-            <div className="col-4 align-self-center">
+            <div className="col-4 align-self-center colorTitulo">
                         <h1 className="card-title mb-5">{name}</h1> 
                         <div className="card-body my-5"> 
                             
@@ -38,10 +38,10 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                         </div>
                     </div>
         
-            <div className="card col-12">
-                <p className="fw-bold mt-5">DESCRIPCIÓN</p>
+            <div className=" col-10 colorTitulo descriptionGr m-5 bordeImg">
+                <p className="fw-bold mt-5 ">DESCRIPCIÓN</p>
                 <p className="card-text my-3">Categoria: {category}</p>
-                <p className="card-text m-5">{description}</p>
+                <p className="card-text m-5 ">{description}</p>
             </div>
         </div>    
         

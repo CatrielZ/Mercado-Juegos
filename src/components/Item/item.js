@@ -8,11 +8,11 @@ const Item = ({name, img, id}) => {
     }
     return (
         <div className="col text-center" onClick={handleClick}>
-        <div className="card">
+        <div className="card colorCard">
             <img src={img} className="card-img-top" alt={name} />
             <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            <Link to={`/detail/${id}`} className="btn btn-dark">Ver detalle</Link>
+            <h5 className="card-title colorTitulo">{name}</h5>
+            <Link to={`/detail/${id}`} className="btn btn-dark colorTitulo">Ver detalle</Link>
             </div>
         </div>
         </div>

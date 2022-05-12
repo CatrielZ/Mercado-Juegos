@@ -1,0 +1,12 @@
+.FooterColor{
+    
+    background: rgb(239,0,11);
+    background: -moz-linear-gradient(top,  rgb(239,0,11) 0%, rgb(234,58,79) 12%, rgb(229,94,109) 24%, rgb(229,59,189) 38%, rgb(155,64,201) 50%, rgb(75,53,204) 70%, rgb(118,110,221) 87%, rgb(129,122,219) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(239,0,11) 0%,rgb(234,58,79) 12%,rgb(229,94,109) 24%,rgb(229,59,189) 38%,rgb(155,64,201) 50%,rgb(75,53,204) 70%,rgb(118,110,221) 87%,rgb(129,122,219) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(239,0,11) 0%,rgb(234,58,79) 12%,rgb(229,94,109) 24%,rgb(229,59,189) 38%,rgb(155,64,201) 50%,rgb(75,53,204) 70%,rgb(118,110,221) 87%,rgb(129,122,219) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef000b', endColorstr='#817adb',GradientType=0 );
+    text-shadow: 2px 2px 2px blue;
+    color: aliceblue;
+    }
+
+   

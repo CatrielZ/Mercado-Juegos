@@ -24,6 +24,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', end
     border-radius: 50%;
 }
 .colorText {
-    color: #fff;
+    text-shadow: 2px 2px 2px blue;
+    color: aliceblue;;
 }
+
 

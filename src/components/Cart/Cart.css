@@ -1,0 +1,13 @@
+
+.colorPrecio{
+    text-shadow: 2px 2px 2px blue;
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: 'Macondo', cursive;
+    
+}
+
+.bordePrecio{
+    border: 2px;
+    box-shadow: 2px 10px 10px black;
+}
