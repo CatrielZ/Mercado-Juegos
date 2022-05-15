@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import './Item.css'
 
-const Item = ({name, img, id}) => {
+const Item = ({name, img, id, stock, price}) => {
 
     const handleClick = (e) => {
         e.stopPropagation()

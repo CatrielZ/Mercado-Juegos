@@ -8,9 +8,25 @@ export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     console.log(cart)
 
-    const addItem = (productAdd) => {
-        setCart([...cart, productAdd])
-    }
+    const addItem = (productToAdd) => {
+        if(!isInCart (productToAdd.id)){
+            setCart([...cart, productToAdd])
+        } else {
+            const newProducts = cart.map(prod => {
+                if(prod.id === productToAdd.id){
+                    const newProducts  = {
+                        ...prod,
+                        quantify : productToAdd.quantify
+                    }
+                    return newProducts;
+                } else {
+                    return prod
+                }
+            })
+            setCart(newProducts)
+        }
+            
+        }
 
     const getQuantity = () => {
         let count = 0
@@ -33,6 +49,10 @@ export const CartContextProvider = ({ children }) => {
         setCart(products)
     }
 
+    const getQuantityProd = (id) => {
+        return cart.find (prod => prod.id === id)?.quantify
+    }
+
     const totalCost = () => {
         let totalCost = Object.values(cart).reduce((acc, {quantify, price}) => acc + quantify * price,0)
         return totalCost
@@ -51,12 +71,13 @@ export const CartContextProvider = ({ children }) => {
             isInCart,
             clearCart,
             removeItem,
+            getQuantityProd, 
             totalCost
            // finishBuy
         }}>
             {children}
         </CartContext.Provider>
     )
-}
-
+    }
+   
 export default CartContext

@@ -13,12 +13,12 @@ const NavBarRight = () => {
         })
     }, [])
     return (
-        <div className='conteiner-fluid p-2 categoriasColor'>
-                <h3 className='text-center fw-bold colorText'>Categorias</h3>
-                  <ul className='text-center list-group p-5 m-3 '>
-                    <li className='list-group-item-warning'><Link to='/list'  aria-current='page' className='colorText'>Todos</Link></li>
-                    <li className='  colorText list-style-none '>
-                      {categories.map(cat =><Link key={cat.id} to={`/category/${cat.id}`} className=' list-group-item " '>{cat.description}</Link>)}
+        <div className='conteiner-fluid p-2 m-2 categoriasColor'>
+                <h3 className='text-center fw-bold colorText pt-5'>Categorias</h3>
+                  <ul className='text-center  p-5 m-5 NavBarRight '>
+                    <li className=' colorTextCategorias fw-bold '><Link to='/list'  aria-current='page'><li>Todos</li></Link></li>
+                    <li className='colorTextCategorias fw-bold'>
+                      {categories.map(cat =><Link key={cat.id} to={`/category/${cat.id}`} className='  colorTextCategorias categoriasColor" '><li>{cat.description}</li></Link>)}
                     </li>
                   </ul>
               </div>

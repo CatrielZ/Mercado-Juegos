@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { firestoreDb } from "../../service/firebase";
-import { collection, getDocs, getDoc } from "firebase/firestore";
+import { collection, getDocs, getDoc, where } from "firebase/firestore";
 const Buscador = () =>{
 
 const [nombre, setnombre]= useState([]);
@@ -15,7 +15,7 @@ const handleChange=e=>{
 }
 
 const filtrar = (terminoBusqueda) =>{
-    const resultadosBusqueda = getDocs(collection(firestoreDb, 'name')).filter((elementos) =>{
+    const resultadosBusqueda = getDocs(collection(firestoreDb, 'products'),where ('name')).filter((elementos) =>{
         if(elementos.name.toString().toLowerCase().include(terminoBusqueda.toLowerCase())){
             return elementos;
         }

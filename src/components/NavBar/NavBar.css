@@ -28,4 +28,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', end
     color: aliceblue;;
 }
 
+.NavBarRight{
+    list-style: none;
+    
+}
+
+.colorTextCategorias{
+    text-shadow: 2px 2px 2px blue;
+    color: rgb(228, 156, 30);
+}
+
 
