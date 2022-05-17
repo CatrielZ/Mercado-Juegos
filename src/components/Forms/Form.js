@@ -16,7 +16,7 @@ const Form = () => {
     const [buttonDisabled,  setButtonDisabled] = useState(true);
 
     const onBlurHandler = (event) => {
-        if (comprador.mail === comprador.mailConfirm){
+        if (comprador.email === comprador.emailConfirm){
             setButtonDisabled(true)
         } else {
             Swal.fire({

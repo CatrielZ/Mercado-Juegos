@@ -1,70 +1,68 @@
-# 
+# GAME ROOM
+## Ecommerce de Videos Juegos 
+**Zeeb Catriel Labat 👻**
+> El proyecto se basa en un Ecommerce que se encarga en vender
+> video juegos, para el curso de React Js. El proyecto se llama Game room.
+> Se podra navegar entre categorias, ver el detalle de cada producto, 
+> chequear el carrito y comprar los  productos elejidos.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ¿Como Empezar?
+## Instalar git clone
+ Para poder accerder al proyecto clonandolo, debera escribir en la terminal:
+ ```
+   git clone  https://github.com/CatrielZ/Mercado-Juegos.git
+   npm install 
+   npm start
+```
+## Instalar download Zip
+```
+Dentro del proyecto ir a "code" > download Zip
+Descarga y descomprimir el archivo.
+Llamar a la terminal en la carpeta "mercadojuegos":
+npm install
+npm start
+```
 
-## Available Scripts
+# ¿Como se trabajo?
+### Tecnologias 🛠️:
+- React JS
+- JavaScript
+- CSS
+- Html
+- Amor ❤️
+- Firebase
+### Se utilizo 📙:
+- React-router-dom
+- Styled-component
+- Sweetalert2
+- React-Firebase
+- React-toastify
+- Bootstrap
 
-In the project directory, you can run:
+## ¿Como Funcionan los componentes?
+Lo primero que veremos al entrar en ***Game Room*** es el ***NavBar***, este 
+tendra 2 opciones *"Inicio"* y *"Genero"*, este mismo permitira filtrar  las categorias y tambien se encuentra el carrito, el ***CartWidget*** mostrara  la cantidad de objetos seleccionados para la comprar.Desde *"Genero"* tambien podras acceder a los diferentes productos contenidos en ***ItemListContainer*** que a su vez contiene a ***ItemList*** que a su vez contiene tambien a ***Item*** luego desde aqui podras acceder al detalle y compra de los productos a traves de ***ItemDetailContainer*** que contiene a su vez a ***ItemDetail***. Podrás ver algunos detalles mas de cada juego, conocer su decripción, su precio, cuánto tenemos de stock, categoria, etc. Desde aquí mismo podrás añadir la cantidad  que quieras a tu carrito gracias al componente ***ItemCount***. Este  permitirá agregar productos a tu carrito.
 
-### `npm start`
+Podras ver tu carrito despues de realizar la compra o tambien al hacer click en el ***CartWidget*** en nuestro ***NavBar***, te llevara al resumen de tus compras realizadas hasta el momento, que es traido por el ***Cart*** que a su vez contiene al ***ItemCart*** usando su ***CartContext***.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dentro del carrito, prodras quitar productos o vaciar el carrito.
+En el caso de querer continuar con la compra, dándole click a finalizar compra, la web te redireccionará a ***Form*** donde deberás completar tus datos, y en el caso de que los mails estén iguales el botón será habilitado para generar la orden y automáticamente se cargará tu id de compra. Despues obtener el codigo de compra, podras volver al Inicio.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Previsualización
+**VIDEO**
+# CartContext
+🕹️ ***addItem*** : Añade el producto al carrito. En el caso de que el producto  ya esté en el carrito, esta función va a evitar que se genere otra línea de *ItemCart*, solo modificará la cantidad de dicho producto.
 
-### `npm test`
+🕹️***getQuantity*** : Esta función permite que cuando agregas productos al carrito se muestre la cantidad en el *CartWidget*.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🕹️ ***isInCart***: Reconoce si el producto está o no en el carrito.
 
-### `npm run build`
+🕹️ ***clearCart***: Esta función está asociada al botón de vaciar carrito y limpiará todo lo que se encuentre en el.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🕹️ ***removeItem***: Esta función removerá el producto con ese id y seteará el nuevo valor del CartWidget.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🕹️***getQuantityProd***: Esta función se utiliza en ItemDetail para guardar la cantidad que seleccionás de ese producto en el contador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🕹️ ***totalCost***: Esta función calcula el valor total de la compra.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 👾 Gracias por leer,  ahora viciarla!👾 
