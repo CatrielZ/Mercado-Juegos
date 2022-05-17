@@ -7,7 +7,7 @@ import { getDocs, writeBatch, query, where, collection, documentId, addDoc } fro
 import './Cart.css'
 
 const Cart =() =>{
-    const { cart, totalCost, clearCart, finishBuy} = useContext(CartContext)
+    const { cart, totalCost, clearCart} = useContext(CartContext)
 
     if(cart.lenght === 0){
         return(
