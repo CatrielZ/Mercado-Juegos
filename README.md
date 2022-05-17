@@ -50,7 +50,7 @@ Dentro del carrito, prodras quitar productos o vaciar el carrito.
 En el caso de querer continuar con la compra, dándole click a finalizar compra, la web te redireccionará a ***Form*** donde deberás completar tus datos, y en el caso de que los mails estén iguales el botón será habilitado para generar la orden y automáticamente se cargará tu id de compra. Despues obtener el codigo de compra, podras volver al Inicio.
 
 # Previsualización
-
+![image](https://github.com/CatrielZ/Mercado-Juegos/blob/main/Gif/Previsualización.gif)
 # CartContext
 🕹️ ***addItem*** : Añade el producto al carrito. En el caso de que el producto  ya esté en el carrito, esta función va a evitar que se genere otra línea de *ItemCart*, solo modificará la cantidad de dicho producto.
 
