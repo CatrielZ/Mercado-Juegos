@@ -13,6 +13,7 @@ import VideoBack from './components/VideosBack/VideoBack';
 import './components/NavBar/NavBar.css'
 import NavBarRight from './components/NavBar/NavBarRight';
 import Footer from './components/Footer/Footer';
+import IndexCarrucel from './components/Carrusel/carrusel';
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
             </div>
             <div className="container col-8">
               <Routes>
+                <Route path='/' element={<IndexCarrucel />} />
                 <Route path='/list' element={<ItemListContainer />} />
                 <Route path='/category/:categoryId' element={<ItemListContainer />} />
                 

@@ -2,10 +2,12 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Buscador from './Buscador'
+
 import { firestoreDb } from '../../service/firebase'
 import { collection, getDocs, where } from 'firebase/firestore'
 import { getCategories, getProducts } from '../../asyncmonck'
+
+
 
 const NavBar = () => {
     const [categories, setCategories] = useState([])
@@ -17,23 +19,14 @@ const NavBar = () => {
         })
     }, [])
 
-  /* getDocs(collection(firestoreDb, 'categories')).then(response =>{
-        const categories = response.docs.map(doc => {
-            return { id: doc.id, ...doc.data()}
-        })
-        setCategories(categories)
-    })*/
-
-
-
     return(
     <nav className='navbar navbar-expand-lg  pb-0 pt-0 fw-bold NavBarColor NavBar'>
         <div className='container-fluid justify-content-center text-center'>
-            <img src="https://img.freepik.com/vector-gratis/logo-sala-juegos_191108-86.jpg" alt='' width='150' height='130' className='me-5 LogoNavBar'/>
+            <Link to="/"><img src="https://img.freepik.com/vector-gratis/logo-sala-juegos_191108-86.jpg" alt='' width='150' height='130' className='me-5 LogoNavBar'/></Link>
             <div className='collapse navbar-collapse justify-content-center mb-0 mt-0' id='navbarSupportedContent'>
                 <ul className='navbar-nav me-5 mb-2 mb-lg-0'>
                     <li className='nav-item'>
-                         <Link to='/list' className='nav-link active colorText' aria-current='page' >Inicio</Link>
+                         <Link to='/list' className='nav-link active colorText' aria-current='page' >Productos</Link>
                          </li>
                     <li className='nav-item dropdown'>
                         <Link  to ='/' className='nav-link dropdown-toggle colorText'  id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
@@ -47,7 +40,7 @@ const NavBar = () => {
                     </li>
               </ul>
                 
-               {/* <Buscador /> */}
+              
             <div className='m-5'>
             <CartWidget />
             </div>

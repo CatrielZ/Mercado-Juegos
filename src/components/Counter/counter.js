@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './Counter.css';
+import Toastify from "toastify-js";
 
 const Counter = ({initial, stock, onAdd}) => {
     
@@ -29,7 +30,7 @@ const Counter = ({initial, stock, onAdd}) => {
            
             <div className="col-12 text-center m-5">
             
-            <button   type ="button" className="btn btn-dark " onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button   type ="button"  className="btn btn-dark " onClick={() => onAdd(count) }>Agregar al carrito</button>
             </div>
             
         </div>

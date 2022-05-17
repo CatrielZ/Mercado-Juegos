@@ -38,10 +38,11 @@ npm start
 - React-Firebase
 - React-toastify
 - Bootstrap
+- React-social-icons
 
 ## ¿Como Funcionan los componentes?
 Lo primero que veremos al entrar en ***Game Room*** es el ***NavBar***, este 
-tendra 2 opciones *"Inicio"* y *"Genero"*, este mismo permitira filtrar  las categorias y tambien se encuentra el carrito, el ***CartWidget*** mostrara  la cantidad de objetos seleccionados para la comprar.Desde *"Genero"* tambien podras acceder a los diferentes productos contenidos en ***ItemListContainer*** que a su vez contiene a ***ItemList*** que a su vez contiene tambien a ***Item*** luego desde aqui podras acceder al detalle y compra de los productos a traves de ***ItemDetailContainer*** que contiene a su vez a ***ItemDetail***. Podrás ver algunos detalles mas de cada juego, conocer su decripción, su precio, cuánto tenemos de stock, categoria, etc. Desde aquí mismo podrás añadir la cantidad  que quieras a tu carrito gracias al componente ***ItemCount***. Este  permitirá agregar productos a tu carrito.
+tendra 2 opciones *"Productos"* y *"Genero"*, este mismo permitira filtrar  las categorias y tambien se encuentra el carrito, el ***CartWidget*** mostrara  la cantidad de objetos seleccionados para la comprar.Desde *"Genero"* tambien podras acceder a los diferentes productos contenidos en ***ItemListContainer*** que a su vez contiene a ***ItemList*** que a su vez contiene tambien a ***Item*** luego desde aqui podras acceder al detalle y compra de los productos a traves de ***ItemDetailContainer*** que contiene a su vez a ***ItemDetail***. Podrás ver algunos detalles mas de cada juego, conocer su decripción, su precio, cuánto tenemos de stock, categoria, etc. Desde aquí mismo podrás añadir la cantidad  que quieras a tu carrito gracias al componente ***ItemCount***. Este  permitirá agregar productos a tu carrito.
 
 Podras ver tu carrito despues de realizar la compra o tambien al hacer click en el ***CartWidget*** en nuestro ***NavBar***, te llevara al resumen de tus compras realizadas hasta el momento, que es traido por el ***Cart*** que a su vez contiene al ***ItemCart*** usando su ***CartContext***.
 
@@ -49,7 +50,7 @@ Dentro del carrito, prodras quitar productos o vaciar el carrito.
 En el caso de querer continuar con la compra, dándole click a finalizar compra, la web te redireccionará a ***Form*** donde deberás completar tus datos, y en el caso de que los mails estén iguales el botón será habilitado para generar la orden y automáticamente se cargará tu id de compra. Despues obtener el codigo de compra, podras volver al Inicio.
 
 # Previsualización
-**VIDEO**
+
 # CartContext
 🕹️ ***addItem*** : Añade el producto al carrito. En el caso de que el producto  ya esté en el carrito, esta función va a evitar que se genere otra línea de *ItemCart*, solo modificará la cantidad de dicho producto.
 
@@ -65,4 +66,4 @@ En el caso de querer continuar con la compra, dándole click a finalizar compra,
 
 🕹️ ***totalCost***: Esta función calcula el valor total de la compra.
 
-# 👾 Gracias por leer,  ahora viciarla!👾 
+# 👾 Gracias por leer,  ahora a viciarla!👾 
