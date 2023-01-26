@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Mercado-Juegos/static/css/main.a2a48174.css",
-    "main.js": "/Mercado-Juegos/static/js/main.b621a761.js",
-    "static/js/787.89ce7336.chunk.js": "/Mercado-Juegos/static/js/787.89ce7336.chunk.js",
-    "static/media/VideoBack.mp4": "/Mercado-Juegos/static/media/VideoBack.5df75d466925bce0745a.mp4",
-    "index.html": "/Mercado-Juegos/index.html",
-    "main.a2a48174.css.map": "/Mercado-Juegos/static/css/main.a2a48174.css.map",
-    "main.b621a761.js.map": "/Mercado-Juegos/static/js/main.b621a761.js.map",
-    "787.89ce7336.chunk.js.map": "/Mercado-Juegos/static/js/787.89ce7336.chunk.js.map"
+    "main.css": "/mercado-juegos/static/css/main.a2a48174.css",
+    "main.js": "/mercado-juegos/static/js/main.95db2851.js",
+    "static/js/787.89ce7336.chunk.js": "/mercado-juegos/static/js/787.89ce7336.chunk.js",
+    "static/media/VideoBack.mp4": "/mercado-juegos/static/media/VideoBack.5df75d466925bce0745a.mp4",
+    "index.html": "/mercado-juegos/index.html",
+    "main.a2a48174.css.map": "/mercado-juegos/static/css/main.a2a48174.css.map",
+    "main.95db2851.js.map": "/mercado-juegos/static/js/main.95db2851.js.map",
+    "787.89ce7336.chunk.js.map": "/mercado-juegos/static/js/787.89ce7336.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a2a48174.css",
-    "static/js/main.b621a761.js"
+    "static/js/main.95db2851.js"
   ]
 }
