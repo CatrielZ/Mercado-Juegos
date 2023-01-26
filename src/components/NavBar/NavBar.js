@@ -20,7 +20,7 @@ const NavBar = () => {
     }, [])
 
     return(
-    <nav className='navbar navbar-expand-lg  pb-0 pt-0 fw-bold NavBarColor NavBar'>
+    <nav className='navbar navbar-expand-lg  pb-0 pt-0 fw-bold NavBarColor NavBar '>
         <div className='container-fluid justify-content-center text-center'>
             <Link to="/"><img src="https://img.freepik.com/vector-gratis/logo-sala-juegos_191108-86.jpg" alt='' width='150' height='130' className='me-5 LogoNavBar'/></Link>
             <div className='collapse navbar-collapse justify-content-center mb-0 mt-0' id='navbarSupportedContent'>

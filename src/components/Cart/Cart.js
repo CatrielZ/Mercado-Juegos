@@ -12,12 +12,12 @@ const Cart =() =>{
     if(cart.lenght === 0){
         return(
             <>
-                <h2>Carrito Vacio</h2>
-                <Link to={'/'}>Conocé nuestros productos</Link>
+                <h2 className="colorText text-center">Carrito Vacio</h2>
+                <Link to={'/list'}>Conocé nuestros productos</Link>
             </> 
         )
     }
-
+    console.log("cart =", cart)
     return (
         <>
             <div className="text-center">
@@ -31,6 +31,7 @@ const Cart =() =>{
         
         </>
     )
+
 }
 
 export default Cart

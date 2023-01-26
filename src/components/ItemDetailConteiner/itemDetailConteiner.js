@@ -31,7 +31,7 @@ const ItemDetailContainer = ({setCart, cart}) => {
                     <h1>Cargando detalle...</h1> :
                 product ?
                     <ItemDetail {...product} setCart={setCart} cart={cart} /> :
-                    <h1>El producto no existe</h1>
+                    <h1 className='colorText text-center'>El producto no existe</h1>
             }
             
         </div>

@@ -24,7 +24,7 @@ const ItemListContainer = (props) => {
     }, [categoryId])
 
     if(products.length === 0){
-        return <h1> No hay productos</h1>
+        return <h1 className="colorText text-center"> No hay productos</h1>
     }
 
 

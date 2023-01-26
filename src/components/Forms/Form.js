@@ -6,7 +6,10 @@ import { Link, NavLink } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import Cart from "../Cart/Cart"
 import Toastify from 'toastify-js'
+import './Form.css'
+
 const objetoComprador = {name: "", phone:"", email:"", emailConfirm:"", address:""};
+
 
 const Form = () => {
     const { cart, clearCart, totalCost } = useContext(CartContext);
@@ -17,7 +20,7 @@ const Form = () => {
 
     const onBlurHandler = (event) => {
         if (comprador.email === comprador.emailConfirm){
-            setButtonDisabled(true)
+            setButtonDisabled(false)
         } else {
             Swal.fire({
                 icon: 'error',
@@ -120,9 +123,9 @@ const Form = () => {
             <label>Telefono:</label>
             <input  type="text"  name="phone"  value={comprador.phone}  onChange={getForm}  className="form-control"  placeholder="Escribí tu telefono"/>
             <label>Email:</label>
-            <input  type="text"  name="email"  value={comprador.email}  onChange={getForm}  className={((comprador.mailConfirm === comprador.mail) ? 'error' : 'great') && 'form-control'}  placeholder="Escribí tu email"/>
+            <input  type="text"  name="email"  value={comprador.email}  onChange={getForm}  className={((comprador.emailConfirm === comprador.email) ? 'error' : 'great') && 'form-control'}  placeholder="Escribí tu email"/>
             <label>Repetir Email:</label>
-            <input  type="text"  name="emailConfirm"  value={comprador.emailConfirm}  onChange={getForm}  className={((comprador.mailConfirm === comprador.mail) ? 'error' : 'great') && 'form-control'}  placeholder="Escribí tu email"/>
+            <input  type="text"  name="emailConfirm"  value={comprador.emailConfirm}  onChange={getForm}  className={((comprador.emailConfirm === comprador.email) ? 'error' : 'great') && 'form-control'}  placeholder="Escribí tu email"/>
   
             <label>Direccion:</label>
             <input  type="text"  name="address"  value={comprador.address}  onChange={getForm}  className="form-control"  placeholder="Escribí tu dirección"/>
